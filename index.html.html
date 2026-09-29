@@ -1,0 +1,2754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>For Marcus 💙</title>
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: 'Press Start 2P', cursive;
+            background: linear-gradient(180deg, #07152f 0%, #102b52 55%, #1b4d3e 100%);
+            color: #315a78;
+            overflow-x: hidden;
+        }
+
+        /* Floating clouds */
+
+        .cloud {
+            position: fixed;
+            font-size: 45px;
+            opacity: 0.7;
+            animation: drift 12s linear infinite;
+            pointer-events: none;
+        }
+
+        .cloud1 {
+            top: 12%;
+            left: -80px;
+        }
+
+        .cloud2 {
+            top: 35%;
+            left: -150px;
+            animation-delay: 5s;
+        }
+
+        @keyframes drift {
+
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(120vw);
+            }
+
+        }
+
+
+        /* Opening screen */
+
+        .opening {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(180deg, #9edcff 0%, #dff4ff 55%, #ffffff 100%);
+}
+
+
+        .opening-content {
+            max-width: 600px;
+            animation: fadeIn 2s ease;
+        }
+
+        @keyframes fadeIn {
+
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+        }
+
+        .small-text {
+            font-size: 18px;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        
+    h1 {
+    font-size: 52px;
+    margin: 10px 0;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow:
+        3px 3px 0 #5b8fb9,
+        6px 6px 0 #315a78;
+}
+
+
+        .message {
+            font-size: 21px;
+            line-height: 1.7;
+            margin: 25px auto;
+            max-width: 500px;
+        }
+
+        /* Envelope */
+
+       .envelope {
+    margin: 35px auto;
+    width: 180px;
+    height: 125px;
+    background: #ffffff;
+    border: 4px solid #8fc7e8;
+    border-radius: 12px;
+    box-shadow:
+        0 12px 25px rgba(63, 126, 164, 0.20);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    z-index: 10000;
+}
+
+.envelope::before {
+    content: "💌";
+    font-size: 60px;
+}
+
+.envelope:hover {
+    transform: translateY(-8px) rotate(-2deg);
+    box-shadow:
+        0 20px 40px rgba(63, 126, 164, 0.30);
+}
+
+        .envelope:hover {
+            transform: translateY(-8px) rotate(-2deg);
+            box-shadow: 0 20px 40px rgba(63, 126, 164, 0.3);
+        }
+
+        .click-text {
+            font-size: 16px;
+            color: #6b91aa;
+        }
+
+        .signature {
+            margin-top: 30px;
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        /* Hidden birthday section */
+
+        #birthday {
+            display: none;
+            min-height: 100vh;
+            padding: 100px 25px;
+            text-align: center;
+            background: linear-gradient(180deg, #bfe8ff 0%, #eaf7ff 100%);
+        }
+
+        #birthday h2 {
+            font-size: 42px;
+            color: #3979a9;
+        }
+
+        .birthday-card {
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 35px 45px;
+    background: #f7efd9;
+    border-radius: 4px;
+    border: 2px solid #e5d7b8;
+    box-shadow:
+        8px 10px 0 rgba(91, 143, 185, 0.18),
+        0 18px 35px rgba(40, 80, 110, 0.18);
+    transform: rotate(-0.5deg);
+    position: relative;
+}
+        
+
+        .birthday-card p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        .back-button {
+            margin-top: 25px;
+            padding: 13px 25px;
+            border: none;
+            border-radius: 25px;
+            background: #79b8d8;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        @media (max-width: 600px) {
+
+            h1 {
+                font-size: 42px;
+            }
+
+            .message {
+                font-size: 18px;
+            }
+
+            .envelope {
+                width: 150px;
+                height: 105px;
+                font-size: 55px;
+            }
+
+        }
+/* ============================= */
+/* DIGITAL SCRAPBOOK */
+/* ============================= */
+
+#scrapbook {
+    display: flex;
+}
+
+.scrapbook-page {
+    min-height: 100vh;
+    background: #080b16;
+    padding: 90px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3d3a35;
+}
+
+.scrapbook-title {
+    text-align: center;
+    color: #e5f5ff;
+    margin-bottom: 35px;
+}
+
+.scrapbook-title p {
+    font-size: 15px;
+    letter-spacing: 3px;
+}
+
+.scrapbook-title h2 {
+    font-size: 40px;
+    font-weight: normal;
+}
+
+
+/* OPEN BOOK */
+
+.book {
+    width: min(950px, 95vw);
+    min-height: 570px;
+
+    display: flex;
+
+    position: relative;
+
+    background: #f3e8d2;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,0.6),
+        0 5px 15px rgba(0,0,0,0.3);
+}
+
+
+
+/* BOOK CENTRE */
+
+.book::after {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 0;
+    bottom: 0;
+
+    width: 3px;
+
+    background: rgba(70,60,50,0.15);
+
+    transform: translateX(-50%);
+}
+
+
+/* BOTH PAGES */
+
+.book-page {
+    width: 50%;
+
+    min-height: 570px;
+
+    position: relative;
+
+    padding: 45px;
+
+    background: #f5ecd9;
+}
+
+
+/* LEFT PAGE */
+
+.left-page {
+
+    text-align: center;
+
+    border-radius: 12px 0 0 12px;
+
+    transform: rotate(-0.4deg);
+}
+
+
+/* RIGHT PAGE */
+
+.right-page {
+
+    border-radius: 0 12px 12px 0;
+
+    transform: rotate(0.4deg);
+}
+
+
+/* BIG 21 */
+
+.big-number {
+
+    position: absolute;
+
+    top: 25px;
+    left: 55px;
+
+    font-family: Georgia, serif;
+
+    font-size: 105px;
+
+    font-weight: bold;
+
+    line-height: 1;
+
+    color: #3979a9;
+}
+
+
+/* CAKE */
+
+.cake {
+
+    position: absolute;
+
+    top: 110px;
+    left: 175px;
+
+    font-size: 32px;
+}
+
+
+/* PHOTO PLACEHOLDER */
+
+.photo-placeholder {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: #e6eaee;
+
+    color: #7d8b96;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 13px;
+}
+
+
+/* LEFT PHOTO */
+
+.childhood-photo {
+
+    width: 220px;
+    height: 250px;
+
+    position: absolute;
+
+    top: 95px;
+    left: 105px;
+
+    padding: 8px;
+
+    background: white;
+
+    box-shadow:
+        0 8px 20px rgba(0,0,0,0.15);
+
+    transform: rotate(-2deg);
+}
+.childhood-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.main-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+/* LEFT MESSAGE */
+
+.small-memory-text {
+
+    position: absolute;
+
+    left: 55px;
+    right: 55px;
+
+    bottom: 45px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: #4f4b45;
+}
+
+
+/* LITTLE STAR */
+
+.corner-star {
+
+    position: absolute;
+
+    top: 25px;
+    left: 25px;
+
+    font-size: 30px;
+
+    color: #8c9daf;
+
+    transform: rotate(-15deg);
+}
+
+
+/* MAIN PHOTO */
+
+.main-photo {
+
+    width: 270px;
+    height: 320px;
+
+    position: absolute;
+
+    top: 55px;
+    left: 85px;
+
+    padding: 10px;
+
+    background: white;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.2);
+
+    transform: rotate(3deg);
+
+    z-index: 3;
+}
+
+
+/* SMALL PHOTO */
+
+.little-photo {
+
+    width: 150px;
+    height: 150px;
+
+    position: absolute;
+
+    bottom: 45px;
+    left: 43px;
+
+    padding: 7px;
+
+    background: white;
+
+    box-shadow:
+        0 7px 18px rgba(0,0,0,0.18);
+
+    transform: rotate(-8deg);
+
+    z-index: 4;
+}
+.little-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* I LOVE YOU */
+
+.love-note {
+
+    position: absolute;
+
+    top: 40px;
+    right: 45px;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+
+    line-height: 1.1;
+
+    color: #96706b;
+
+    transform: rotate(-5deg);
+
+    z-index: 5;
+}
+
+.love-note span {
+
+    font-size: 28px;
+
+    color: #7e303d;
+}
+
+
+/* SCRAP PAPER */
+
+.scrap-paper {
+
+    position: absolute;
+
+    bottom: 50px;
+    right: 50px;
+
+    padding: 15px 18px;
+
+    background: #ead9c3;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+
+    color: #76604d;
+
+    transform: rotate(5deg);
+
+    box-shadow:
+        0 4px 10px rgba(0,0,0,0.12);
+}
+
+
+/* DECORATION */
+
+.star-decoration {
+
+    position: absolute;
+
+    top: 160px;
+    right: 35px;
+
+    font-size: 25px;
+
+    color: #b89d62;
+}
+
+
+/* BOTTOM MESSAGE */
+
+.more-memories {
+
+    margin-top: 35px;
+
+    color: #e5f5ff;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    font-style: italic;
+
+}
+
+
+/* BUTTON */
+
+.next-memory-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    margin-top: 25px;
+    padding: 14px 28px;
+
+    background: #315a78;
+    color: white;
+
+    border: 3px solid white;
+    border-radius: 10px;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    line-height: 1;
+
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        5px 5px 0 #8fc7e8,
+        0 8px 18px rgba(49, 90, 120, 0.25);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+
+/* PHONE */
+
+@media (max-width: 700px) {
+
+    .book {
+
+        width: 95vw;
+
+        flex-direction: column;
+    }
+
+    .book-page {
+
+        width: 100%;
+
+        min-height: 500px;
+    }
+
+    .book::after {
+
+        display: none;
+    }
+
+    .left-page {
+
+        border-radius: 12px 12px 0 0;
+    }
+
+    .right-page {
+
+        border-radius: 0 0 12px 12px;
+    }
+
+    .childhood-photo {
+
+        left: 50%;
+
+        transform:
+            translateX(-50%)
+            rotate(-2deg);
+    }
+
+    .main-photo {
+
+        left: 50%;
+
+        transform:
+            translateX(-50%)
+            rotate(3deg);
+    }
+
+}
+
+/* SCRAPBOOK LOOK */
+
+.scrapbook-page {
+    background: linear-gradient(180deg, #bfe8ff 0%, #eaf7ff 100%);
+    padding-top: 70px;
+}
+
+.book {
+    box-shadow:
+        0 25px 50px rgba(49, 90, 120, 0.25),
+        8px 8px 0 rgba(255, 255, 255, 0.7);
+}
+
+/* SCRAPBOOK TITLE */
+
+.scrapbook-title h2 {
+    color: #ffffff;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 34px;
+    letter-spacing: 2px;
+    text-shadow:
+        4px 4px 0 #315a78,
+        7px 7px 0 #7db8dc;
+    margin-bottom: 12px;
+}
+
+.scrapbook-title p {
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 white;
+}
+
+/* EXTRA SCRAPBOOK DETAILS */
+
+.book {
+    border: 3px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+        0 20px 35px rgba(49, 90, 120, 0.25),
+        10px 10px 0 rgba(255, 255, 255, 0.55);
+}
+
+.book-page {
+    box-shadow: inset 0 0 25px rgba(120, 90, 50, 0.06);
+}
+
+.small-memory-text {
+    color: #4f5963;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.love-note {
+    color: #c56d89;
+    text-shadow: 2px 2px 0 #f5dce5;
+}
+
+.childhood-photo::before,
+.main-photo::before,
+.little-photo::before {
+    content: "";
+    position: absolute;
+    z-index: 10;
+}
+
+.childhood-photo::before {
+    width: 75px;
+    height: 18px;
+    background: rgba(151, 207, 236, 0.85);
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-4deg);
+}
+
+.main-photo::before {
+    width: 85px;
+    height: 20px;
+    background: rgba(244, 185, 205, 0.85);
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%) rotate(3deg);
+}
+
+.little-photo::before {
+    width: 55px;
+    height: 16px;
+    background: rgba(151, 207, 236, 0.85);
+    top: -11px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-6deg);
+}
+
+/* =========================================
+   PHOTO + BUTTON UPDATE
+   ========================================= */
+
+/* BIGGER BABY PHOTO */
+.childhood-photo {
+    width: 250px;
+    height: 290px;
+    top: 85px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+/* RIGHT PHOTOS - SAME SIZE */
+.main-photo,
+.little-photo {
+    width: 220px;
+    height: 250px;
+    left: 50%;
+}
+
+/* TOP RIGHT PHOTO */
+.main-photo {
+    top: 45px;
+    transform: translateX(-50%) rotate(2deg);
+}
+
+/* BOTTOM RIGHT PHOTO */
+.little-photo {
+    bottom: 35px;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+/* KEEP PHOTOS FITTING INSIDE THEIR FRAMES */
+.childhood-photo img,
+.main-photo img,
+.little-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* MAKE THE PAGE BUTTON STAND OUT */
+.next-memory-button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 16px 28px;
+
+    background: #315a78;
+    color: white;
+
+    border: 3px solid white;
+    border-radius: 8px;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+
+    box-shadow:
+        5px 5px 0 #8fc7e8,
+        0 8px 18px rgba(49, 90, 120, 0.25);
+
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* BUTTON HOVER */
+.next-memory-button:hover {
+    background: #5b8fb9;
+    transform: translateY(-3px);
+    box-shadow:
+        7px 7px 0 #f4b9cd,
+        0 10px 20px rgba(49, 90, 120, 0.3);
+}
+
+/* PHOTO SIZE + ALIGNMENT UPDATE */
+
+.childhood-photo {
+    width: 250px;
+    height: 290px;
+    top: 145px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.main-photo,
+.little-photo {
+    width: 220px;
+    height: 250px;
+    left: 50%;
+}
+
+.main-photo {
+    top: 45px;
+    transform: translateX(-50%) rotate(2deg);
+}
+
+.little-photo {
+    bottom: 35px;
+    transform: translateX(-50%) rotate(-2deg);
+}
+
+.childhood-photo img,
+.main-photo img,
+.little-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* =========================================
+   LETTER PAGE
+   ========================================= */
+
+#letter {
+    display: block;
+}
+
+.letter-page {
+    min-height: 100vh;
+    padding: 90px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        180deg,
+        #bfe8ff 0%,
+        #eaf7ff 100%
+    );
+}
+
+/* Paper */
+#letter .letter-card {
+        min-height: 0;
+    height: 82vh;
+    padding: 40px 55px;
+
+    background: #f7efd9;
+
+    border: 3px solid #e5d7b8;
+    border-radius: 5px;
+
+    box-shadow:
+        10px 12px 0 rgba(91, 143, 185, 0.18),
+        0 20px 40px rgba(49, 90, 120, 0.20);
+
+    position: relative;
+
+    transform: rotate(-0.5deg);
+}
+
+/* Pink tape */
+.letter-tape {
+    position: absolute;
+
+    top: -18px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(3deg);
+
+    width: 110px;
+    height: 28px;
+
+    background: rgba(244, 185, 205, 0.85);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 18px;
+}
+
+/* Small heading */
+.letter-small-title {
+    text-align: center;
+
+    color: #5b8fb9;
+
+    font-family: 'Press Start 2P', cursive;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 35px;
+}
+
+/* Dear Marcus */
+.letter-card h2 {
+    color: #315a78;
+
+    font-family: 'Press Start 2P', cursive;
+
+    font-size: 25px;
+
+    margin-bottom: 35px;
+
+    text-shadow: 2px 2px 0 #b8dced;
+}
+
+/* Letter text */
+.letter-content {
+    color: #4f5963;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    line-height: 1.9;
+
+    text-align: left;
+}
+
+.letter-content p {
+    margin-bottom: 25px;
+}
+
+/* Signature */
+.letter-signature {
+    margin-top: 40px;
+
+    color: #c56d89;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    text-align: right;
+}
+
+/* =========================
+   MORE MEMORIES PAGE
+   ========================= */
+
+.photo-page {
+    min-height: 100vh;
+    padding: 90px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #cfeeff;
+}
+
+.photo-card {
+    width: min(900px, 92vw);
+    min-height: 700px;
+    position: relative;
+    padding: 55px 60px;
+    background: #f7edd9;
+    border: 3px solid #e8d6b5;
+    box-shadow: 12px 14px 0 rgba(70, 130, 160, 0.18);
+    border-radius: 6px;
+}
+
+.photo-tape {
+    position: absolute;
+    top: -18px;
+    left: 50%;
+    transform: translateX(-50%) rotate(1deg);
+    width: 110px;
+    height: 30px;
+    background: #f4a9c8;
+    opacity: 0.85;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+
+.photo-page-title {
+    text-align: center;
+    color: #5b91bd;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.photo-card h2 {
+    text-align: center;
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+/* FOUR PHOTO SPACES */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 650px;
+    margin: 0 auto 35px;
+}
+
+.extra-photo {
+    height: 190px;
+    background: white;
+    border: 10px solid white;
+    box-shadow: 5px 7px 12px rgba(49, 90, 120, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.extra-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.extra-photo:nth-child(1) {
+    transform: rotate(-2deg);
+}
+
+.extra-photo:nth-child(2) {
+    transform: rotate(2deg);
+}
+
+.extra-photo:nth-child(3) {
+    transform: rotate(2deg);
+}
+
+.extra-photo:nth-child(4) {
+    transform: rotate(-2deg);
+}
+
+.extra-photo span {
+    font-size: 35px;
+    opacity: 0.45;
+}
+
+/* SHORT MESSAGE */
+
+.short-message {
+    margin: 25px auto 0;
+    max-width: 650px;
+    padding: 22px 28px;
+    background: rgba(255, 255, 255, 0.55);
+    border: 2px dashed #9fc8df;
+    text-align: center;
+}
+
+.short-message p {
+    margin: 0 0 12px;
+    color: #5b91bd;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+}
+
+.message-space {
+    min-height: 65px;
+    padding: 15px;
+    color: #777;
+    font-family: Georgia, serif;
+    font-size: 16px;
+    font-style: italic;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.opening,
+#birthday,
+.scrapbook-page,
+.letter-page,
+.photo-page {
+    min-height: 100vh;
+    height: auto;
+    overflow: visible;
+}
+
+/* CALENDAR PAGE */
+#calendar {
+    display: none;
+}
+.calendar-page {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    background: linear-gradient(180deg, #bfe8ff 0%, #f7fcff 100%);
+    overflow: hidden;
+    padding: 30px;
+}
+
+.calendar-card {
+    width: min(700px, 90vw);
+    padding: 45px 50px;
+    background: #fffdf8;
+    border: 3px solid white;
+    border-radius: 8px;
+    box-shadow:
+        10px 12px 0 rgba(91, 143, 185, 0.15),
+        0 20px 40px rgba(49, 90, 120, 0.18);
+    text-align: center;
+}
+
+.calendar-small {
+    margin: 0 0 18px;
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+.calendar-card h1 {
+    margin: 0 0 28px;
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 32px;
+    text-shadow: 3px 3px 0 #9edcff;
+}
+
+.calendar-month {
+    width: 100%;
+}
+
+.calendar-weekdays,
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+
+.calendar-weekdays {
+    margin-bottom: 12px;
+    color: #7da8c5;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+
+.calendar-days span {
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4f5963;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+}
+
+.calendar-days .birthday-date {
+    background: #f4b9cd;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 0 #9edcff;
+    transform: scale(1.15);
+}
+
+.calendar-message {
+    margin: 30px 0 0;
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+    line-height: 2;
+}
+/* CALENDAR AESTHETIC UPGRADE */
+
+.calendar-page {
+    background:
+        radial-gradient(circle at 12% 20%, rgba(255,255,255,.75) 0 5px, transparent 6px),
+        radial-gradient(circle at 88% 25%, rgba(255,255,255,.8) 0 7px, transparent 8px),
+        radial-gradient(circle at 20% 82%, rgba(255,255,255,.6) 0 6px, transparent 7px),
+        linear-gradient(180deg, #b9e5fb 0%, #e7f6ff 55%, #ffffff 100%);
+}
+
+.calendar-card {
+    position: relative;
+    width: min(720px, 88vw);
+    padding: 50px 55px 42px;
+    background: #fffdf7;
+
+    border: 3px solid white;
+    border-radius: 6px;
+
+    box-shadow:
+        9px 11px 0 rgba(91,143,185,.16),
+        0 25px 50px rgba(49,90,120,.18);
+
+    transform: rotate(-0.6deg);
+}
+
+/* pink washi tape */
+.calendar-card::before {
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 30px;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: rgba(244,185,205,.85);
+    box-shadow: 0 3px 6px rgba(49,90,120,.08);
+}
+
+/* little sparkle */
+.calendar-card::after {
+    content: "✦";
+    position: absolute;
+    right: 28px;
+    top: 25px;
+
+    color: #8fc7e8;
+    font-size: 28px;
+}
+
+.calendar-small {
+    color: #7da8c5;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.calendar-card h1 {
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 36px;
+    letter-spacing: 3px;
+
+    text-shadow:
+        3px 3px 0 #b9e5fb,
+        5px 5px 0 rgba(91,143,185,.12);
+}
+
+/* cream paper calendar */
+.calendar-month {
+    padding: 25px 20px 20px;
+
+    background: #f7efd9;
+    border: 2px dashed #d7c9aa;
+
+    transform: rotate(.4deg);
+
+    box-shadow:
+        3px 4px 0 rgba(91,143,185,.08);
+}
+
+.calendar-weekdays {
+    color: #8aaec5;
+    font-family: 'Press Start 2P', cursive;
+}
+
+/* calendar numbers */
+.calendar-days span {
+    color: #596773;
+    transition: transform .15s ease;
+}
+
+/* Marcus' birthday — October 10 */
+.calendar-days .birthday-date {
+    position: relative;
+
+    background: #f1a9c1;
+    color: white;
+
+    box-shadow:
+        3px 3px 0 #8fc7e8,
+        0 5px 10px rgba(49,90,120,.15);
+
+    transform: scale(1.18);
+}
+
+/* heart above the birthday */
+.calendar-days .birthday-date::before {
+    content: "♡";
+    position: absolute;
+    top: -19px;
+
+    color: #f1a9c1;
+    font-size: 17px;
+}
+
+.calendar-message {
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    line-height: 2.1;
+}
+
+.calendar-message::after {
+    content: "♡";
+    display: block;
+    margin-top: 8px;
+
+    color: #f1a9c1;
+    font-size: 24px;
+}
+
+/* =========================
+   WISH PAGE
+   ========================= */
+
+#wish {
+    display: none;
+}
+
+.wish-page {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    overflow: visible;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(255,255,255,.7) 0 7px, transparent 8px),
+        radial-gradient(circle at 85% 75%, rgba(255,255,255,.7) 0 9px, transparent 10px),
+        linear-gradient(135deg, #bfe8ff 0%, #eaf7ff 50%, #fff9fb 100%);
+}
+
+/* soft decorative hearts */
+.wish-page::before {
+    content: "♡       ✦       ♡       ✦       ♡";
+    position: absolute;
+    top: 45px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+    color: rgba(91,143,185,.5);
+    font-size: 22px;
+    letter-spacing: 12px;
+}
+
+/* little pink heart */
+.wish-page::after {
+    content: "♡";
+    position: absolute;
+    bottom: 50px;
+    right: 12%;
+
+    color: #f1a9c1;
+    font-size: 55px;
+    transform: rotate(15deg);
+}
+
+/* cream scrapbook card */
+.wish-card {
+    width: min(620px, 85vw);
+    min-height: 620px;
+    padding: 55px 45px;
+
+    box-sizing: border-box;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: #fffdf7;
+    border: 3px solid white;
+    border-radius: 6px;
+
+    box-shadow:
+        9px 11px 0 rgba(91,143,185,.16),
+        0 25px 50px rgba(49,90,120,.18);
+
+    transform: rotate(-0.7deg);
+}
+
+/* pink washi tape */
+.wish-card::before {
+    content: "";
+    position: absolute;
+
+    width: 125px;
+    height: 30px;
+
+    top: -16px;
+    left: 50%;
+
+    transform: translateX(-50%) rotate(-2deg);
+
+    background: rgba(244,185,205,.85);
+}
+
+/* sparkle */
+.wish-card::after {
+    content: "✦";
+    position: absolute;
+    top: 25px;
+    right: 30px;
+
+    color: #8fc7e8;
+    font-size: 28px;
+}
+
+.wish-small {
+    margin: 0 0 18px;
+
+    color: #7da8c5;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.wish-card h1 {
+    margin: 0;
+
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 25px;
+    line-height: 1.6;
+    text-align: center;
+
+    text-shadow:
+        3px 3px 0 #b9e5fb;
+}
+
+/* cake */
+.wish-cake {
+    margin: 35px 0 20px;
+
+    font-size: 105px;
+    line-height: 1;
+
+    filter: drop-shadow(5px 7px 0 rgba(91,143,185,.15));
+
+    animation: littleCakeBounce 2.5s ease-in-out infinite;
+}
+
+@keyframes littleCakeBounce {
+    0%, 100% {
+        transform: translateY(0) rotate(-2deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(2deg);
+    }
+}
+
+.wish-card h2 {
+    margin: 5px 0 20px;
+
+    color: #f1a9c1;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+
+    text-shadow: 2px 2px 0 #ffffff;
+}
+
+.wish-message {
+    margin: 0;
+
+    color: #596773;
+    font-family: Georgia, serif;
+    font-size: 19px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.wish-bottom {
+    margin-top: 30px;
+
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 9px;
+    line-height: 2;
+    text-align: center;
+}
+/* CONFETTI */
+.confetti {
+    position: fixed;
+    top: -20px;
+    width: 10px;
+    height: 16px;
+    z-index: 99999;
+    pointer-events: none;
+
+    animation: confettiFall 3s linear forwards;
+}
+
+@keyframes confettiFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
+}
+
+/* FINAL WISH PAGE FIX */
+
+.wish-card h1,
+.wish-card h2,
+.wish-card .wish-small,
+.wish-card .wish-cake,
+.wish-card .wish-message,
+.wish-card .wish-bottom {
+    position: static !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    float: none !important;
+}
+
+.wish-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+}
+
+.wish-card h1,
+.wish-card h2,
+.wish-card .wish-small,
+.wish-card .wish-message,
+.wish-card .wish-bottom {
+    width: 100% !important;
+    max-width: 100% !important;
+    text-align: center !important;
+}
+
+.wish-card .wish-cake {
+    margin: 25px auto !important;
+}
+
+/* REASONS WHY I LOVE YOU PAGE */
+
+.reasons-page {
+    min-height: 100vh;
+    padding: 70px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #bfe8ff 0%, #eaf7ff 100%);
+}
+
+.reasons-card {
+    width: min(760px, 90vw);
+    padding: 55px 50px;
+    background: #f7efd9;
+    border: 3px solid #e5d7b8;
+    border-radius: 5px;
+    box-shadow:
+        10px 12px 0 rgba(91, 143, 185, 0.18),
+        0 20px 40px rgba(49, 90, 120, 0.20);
+    position: relative;
+    transform: rotate(-0.5deg);
+}
+
+.reasons-small {
+    margin: 0 0 18px;
+    color: #7da8c5;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.reasons-card h1 {
+    margin: 0 0 35px;
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
+    line-height: 1.6;
+    text-align: center;
+    text-shadow: 3px 3px 0 #9ed4ef;
+}
+
+
+   .reasons-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+}
+
+.reason {
+    padding: 10px 12px;
+    gap: 10px;
+    min-height: 55px;
+}
+
+.reason p {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.reason {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 14px 18px;
+    background: rgba(255, 255, 255, 0.65);
+    border-left: 5px solid #8fc7e8;
+    box-shadow: 3px 4px 0 rgba(91, 143, 185, 0.12);
+}
+
+.reason span {
+    color: #f1a9c1;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+    min-width: 35px;
+}
+
+.reason p {
+    margin: 0;
+    color: #596773;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+.reasons-bottom {
+    margin: 30px 0 0;
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+/* FIX REASONS PAGE - 20 REASONS */
+#reasons {
+    min-height: 100vh;
+    padding: 50px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.reasons-card {
+    width: min(1100px, 92vw);
+    max-height: 90vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.reasons-list {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px 18px !important;
+}
+
+.reason {
+    min-height: 55px;
+    box-sizing: border-box;
+}
+
+/* FIX LETTER PAGE */
+.letter-page {
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.letter-card {
+    width: min(700px, 90vw);
+    min-height: 0;
+    height: 88vh;
+    max-height: 88vh;
+    padding: 45px 55px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.letter-content {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.letter-signature {
+    margin-top: 25px;
+    font-size: 16px;
+}
+</style>
+
+</head>
+
+
+<body>
+
+    <!-- Floating clouds -->
+
+    <div class="cloud cloud1">☁️</div>
+    <div class="cloud cloud2">☁️</div>
+
+
+    <!-- OPENING -->
+
+    <section class="opening" id="opening">
+
+        <div class="opening-content">
+
+            <div class="small-text">
+                ♡ for my favourite person ♡
+            </div>
+
+            <h1>Hey Marcus 💙</h1> 
+
+            <p class="message">
+                Hey baby, here's a little something for you.
+                I hope you like it.
+            </p>
+
+    <div class="envelope" onclick="openBirthday()"></div>
+
+<div class="click-text">
+    click the letter ♡
+</div>
+
+
+
+    </section>
+
+
+    <!-- BIRTHDAY MESSAGE -->
+     <!-- CALENDAR PAGE -->
+<section class="calendar-page" id="calendar">
+
+    <div class="calendar-card">
+
+        <p class="calendar-small">A DATE WORTH CELEBRATING ♡</p>
+
+        <h1>OCTOBER</h1>
+
+        <div class="calendar-month">
+
+            <div class="calendar-weekdays">
+                <span>S</span>
+                <span>M</span>
+                <span>T</span>
+                <span>W</span>
+                <span>T</span>
+                <span>F</span>
+                <span>S</span>
+            </div>
+
+            <div class="calendar-days">
+                <span></span>
+                <span></span>
+                <span>1</span>
+                <span>2</span>
+                <span>3</span>
+                <span>4</span>
+                <span>5</span>
+
+                <span>6</span>
+                <span>7</span>
+                <span>8</span>
+                <span>9</span>
+                <span class="birthday-date">10</span>
+                <span>11</span>
+                <span>12</span>
+
+                <span>13</span>
+                <span>14</span>
+                <span>15</span>
+                <span>16</span>
+                <span>17</span>
+                <span>18</span>
+                <span>19</span>
+
+                <span>20</span>
+                <span>21</span>
+                <span>22</span>
+                <span>23</span>
+                <span>24</span>
+                <span>25</span>
+                <span>26</span>
+
+                <span>27</span>
+                <span>28</span>
+                <span>29</span>
+                <span>30</span>
+                <span>31</span>
+            </div>
+
+        </div>
+
+        <p class="calendar-message">
+            the day my favourite person<br>
+            came into the world ♡
+        </p>
+
+    </div>
+
+</section>
+
+</section>
+    <section id="birthday">
+
+        <div class="birthday-card">
+
+            <div style="font-size: 60px;">
+                🎂
+            </div>
+
+            <h2>Happy Birthday, Marcus! 💙</h2>
+
+            <p>
+                October 10, 2026 ♡
+            </p>
+
+            <p>
+                Hey baby happy 21st birthday. 
+                Here's something I made for you, I really hope you like it. 
+                I love you so so much. 
+                MWUAHHHHH 
+            </p>
+
+            <p>
+                I love you 
+                - Ning 
+            </p>
+
+
+        </div>
+
+    </section>
+
+<!-- SCRAPBOOK PAGE -->
+
+<section class="scrapbook-page" id="scrapbook">
+
+    <div class="scrapbook-title">
+
+
+        <h2> HAPPY BIRTHDAY BABY </h2>
+
+    </div>
+
+
+    <div class="book">
+
+        <!-- LEFT PAGE -->
+
+        <div class="book-page left-page">
+
+            <div class="corner-star">
+                ✦
+            </div>
+
+            <div class="big-number">
+                21
+            </div>
+
+
+            <div class="memory-photo childhood-photo">
+
+                <img src="Images/WhatsApp Image 2026-09-27 at 1.08.39 AM.jpeg" alt="Marcus">
+
+            </div>
+
+            <p class="small-memory-text">
+
+                Happy Birthday to my favourite person.
+                I hope your 21st is as amazing as you are.
+                I love you! ♡
+
+            </p>
+
+        </div>
+
+
+        <!-- RIGHT PAGE -->
+
+        <div class="book-page right-page">
+
+            <div class="love-note">
+
+                i love<br>
+
+                <span>you</span>
+
+            </div>
+
+
+            <div class="photo-frame main-photo">
+
+                <img src="Images/WhatsApp Image 2026-09-27 at 1.09.05 AM.jpeg" alt="Marcus and Ning">
+
+            </div>
+
+
+            <div class="little-photo">
+
+                <img src="Images/WhatsApp Image 2026-09-27 at 1.08.14 AM.jpeg" alt="Our memory">
+
+            </div>
+
+
+            <div class="scrap-paper">
+
+
+            </div>
+
+
+            <div class="star-decoration">
+                ✦
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <p class="more-memories">
+
+        I hope you enjoy your special day <3
+
+    </p>
+
+
+</section>
+
+<!-- LETTER PAGE -->
+<section class="letter-page" id="letter">
+
+    <div class="letter-card">
+
+    <div class="letter-content">
+    <p>Heyy Babyyy, Happy 21st Birthday.</p>
+
+    <p>
+        I love you so so much and I hope you know that.
+        I hope you enjoy your birthday. I'm so happy you came into my life.
+        You’re the best person I could ever ask for.
+    </p>
+
+    <p>
+        Thank you for always loving me and being there for me when I need you
+        the most, I wanna do that for you too. I wanna be there for you
+        whenever you need me doesn't matter if you’re happy or sad or whatever
+        you’re going through. I wanna be there for it all. You make me feel safe, 
+        loved and understand in a way that means more to me than I can explain. 
+    </p>
+
+<p> 
+    I love the litte memories we've made together. Even the random and silly 
+    moments are memories I wouldn't trade for anything. 
+
+</p>
+    <p>
+        I hope we can spend many more birthdays together and go on trips
+        together.
+    </p>
+
+    <p>
+    No matter where life takes us, I hope you always remember
+    that you have someone who will always be cheering for you.
+    I'm so proud of you, and I'm so lucky that I get to love you.
+</p> 
+
+    <p>
+        I love you so much Marcus. &lt;3
+    </p>
+</div>
+
+<p class="letter-signature">
+    With all my love,<br>
+    Ning ♡
+</p>
+
+    </div>
+
+</section>
+
+<!-- PHOTO MEMORIES PAGE -->
+<section class="photo-page" id="photo-page">
+
+    <div class="photo-card">
+
+        <div class="photo-tape">♡</div>
+
+        <p class="photo-page-title">a friendship worth keeping</p>
+
+        <h2>More memories</h2>
+
+        <div class="photo-grid">
+
+            <div class="extra-photo">
+    <img src="Images/Idzlan 1.jpeg" alt="Idzlan">
+</div>
+
+            <div class="extra-photo">
+            <img src="Images/Idzlan 3.jpeg" alt="Idzlan 3">
+            </div>
+
+            <div class="extra-photo">
+            <img src="Images/Idzlan 2.jpeg" alt="Idzlan 2">
+            </div>
+
+            <div class="extra-photo">
+            <img src="Images/Idzlan 4.jpeg" alt="Idzlan 4">
+            </div>
+
+        </div>
+
+        <div class="short-message">
+            <p>♡ a little message for you ♡</p>
+
+            <div class="message-space">
+    Marcus, I don't say it often anymore but you will always be my other half.
+    Thank you for being you and I hope I'll get to say you're my best pal
+    till the end of times.
+    <br><br>
+    Love ya bud 
+    <br>
+    — Idzlan
+</div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- 21 WISHES PAGE -->
+<section class="wishes-page" id="wishes">
+
+    <div class="wishes-card">
+
+        <div class="wishes-tape">♡</div>
+
+        <p class="wishes-small">♡ 21 wishes for you ♡</p>
+
+        <h2>21 Wishes<br>for Marcus</h2>
+
+        <div class="wishes-list">
+
+            <div class="wish">
+                <span>01</span>
+                <p>I wish you a year filled with happiness and love.</p>
+            </div>
+
+            <div class="wish">
+                <span>02</span>
+                <p>I wish you always have a reason to smile.</p>
+            </div>
+
+            <div class="wish">
+                <span>03</span>
+                <p>I wish you good health and peaceful days.</p>
+            </div>
+
+            <div class="wish">
+                <span>04</span>
+                <p>I wish all your dreams slowly become reality.</p>
+            </div>
+
+            <div class="wish">
+                <span>05</span>
+                <p>I wish you confidence in everything you do.</p>
+            </div>
+
+            <div class="wish">
+                <span>06</span>
+                <p>I wish you success in everything you work towards.</p>
+            </div>
+
+            <div class="wish">
+                <span>07</span>
+                <p>I wish you many more adventures and trips together.</p>
+            </div>
+
+            <div class="wish">
+                <span>08</span>
+                <p>I wish you moments that make you genuinely happy.</p>
+            </div>
+
+            <div class="wish">
+                <span>09</span>
+                <p>I wish you people around you who always support you.</p>
+            </div>
+
+            <div class="wish">
+                <span>10</span>
+                <p>I wish you courage whenever life gets difficult.</p>
+            </div>
+
+            <div class="wish">
+                <span>11</span>
+                <p>I wish you never forget how loved you are.</p>
+            </div>
+
+            <div class="wish">
+                <span>12</span>
+                <p>I wish you many more birthdays for us to celebrate together.</p>
+            </div>
+
+            <div class="wish">
+                <span>13</span>
+                <p>I wish you laughter on even the most ordinary days.</p>
+            </div>
+
+            <div class="wish">
+                <span>14</span>
+                <p>I wish you the courage to chase what you really want.</p>
+            </div>
+
+            <div class="wish">
+                <span>15</span>
+                <p>I wish you exciting new experiences and memories.</p>
+            </div>
+
+            <div class="wish">
+                <span>16</span>
+                <p>I wish you always feel proud of how far you've come.</p>
+            </div>
+
+            <div class="wish">
+                <span>17</span>
+                <p>I wish you countless little moments that make life special.</p>
+            </div>
+
+            <div class="wish">
+                <span>18</span>
+                <p>I wish you someone who will always stand beside you.</p>
+            </div>
+
+            <div class="wish">
+                <span>19</span>
+                <p>I wish we get to grow, laugh and experience life together.</p>
+            </div>
+
+            <div class="wish">
+                <span>20</span>
+                <p>I wish you always remember how much I love you</p>
+            </div>
+
+            <div class="wish">
+                <span>21</span>
+                <p>I wish that no matter where life takes us, you always know how much I love you. ♡</p>
+            </div>
+
+        </div>
+
+        <p class="wishes-bottom">
+            21 wishes for your 21st ♡<br>
+            and I hope I get to be there for every one.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- REASONS WHY I LOVE YOU PAGE -->
+<section class="reasons-page" id="reasons">
+
+    <div class="reasons-card">
+
+        <p class="reasons-small">♡ a little reminder for you ♡</p>
+
+        <h1>Reasons Why<br>I Love You</h1>
+<div class="reasons-list">
+
+    <div class="reason">
+        <span>01</span>
+        <p>Because you make me feel loved and safe.</p>
+    </div>
+
+    <div class="reason">
+        <span>02</span>
+        <p>Because you always make me laugh.</p>
+    </div>
+
+    <div class="reason">
+        <span>03</span>
+        <p>Because I love the little moments we share.</p>
+    </div>
+
+    <div class="reason">
+        <span>04</span>
+        <p>Because you are my favourite person.</p>
+    </div>
+
+    <div class="reason">
+        <span>05</span>
+        <p>Because I can be completely myself with you.</p>
+    </div>
+
+    <div class="reason">
+        <span>06</span>
+        <p>Because life is better with you in it.</p>
+    </div>
+
+    <div class="reason">
+        <span>07</span>
+        <p>Because you understand me.</p>
+    </div>
+
+    <div class="reason">
+        <span>08</span>
+        <p>Because you always know how to make my day better.</p>
+    </div>
+
+    <div class="reason">
+        <span>09</span>
+        <p>Because I love your smile.</p>
+    </div>
+
+    <div class="reason">
+        <span>10</span>
+        <p>Because you make ordinary days special.</p>
+    </div>
+
+    <div class="reason">
+        <span>11</span>
+        <p>Because you are always there for me.</p>
+    </div>
+
+    <div class="reason">
+        <span>12</span>
+        <p>Because you make me feel special.</p>
+    </div>
+
+    <div class="reason">
+        <span>13</span>
+        <p>Because I love talking to you about everything.</p>
+    </div>
+
+    <div class="reason">
+        <span>14</span>
+        <p>Because you know how to cheer me up.</p>
+    </div>
+
+    <div class="reason">
+        <span>15</span>
+        <p>Because I love making memories with you.</p>
+    </div>
+
+    <div class="reason">
+        <span>16</span>
+        <p>Because you make me feel understood.</p>
+    </div>
+
+    <div class="reason">
+        <span>17</span>
+        <p>Because I love all the little things about you.</p>
+    </div>
+
+    <div class="reason">
+        <span>18</span>
+        <p>Because you make me excited for our future.</p>
+    </div>
+
+    <div class="reason">
+        <span>19</span>
+        <p>Because being with you feels like home.</p>
+    </div>
+
+    <div class="reason">
+        <span>20</span>
+        <p>Because I simply love you</p>
+    </div>
+
+</div>
+        
+        </p>
+
+    </div>
+
+</section>
+
+<!-- FINAL BIRTHDAY PAGE -->
+<section class="final-page" id="final-page">
+
+    <div class="final-overlay"></div>
+
+    <div class="final-message">
+        <h1>Happy 21st Birthday Marcus!</h1>
+        <p>I love you so much ♡</p>
+    </div>
+
+</section>
+
+<style>
+/* =========================================
+   21 WISHES PAGE
+   ========================================= */
+
+#wishes {
+    display: flex;
+}
+
+.wishes-page {
+    width: 100%;
+    min-height: 100vh;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    display: block;
+    background: linear-gradient(180deg, #bfe8ff 0%, #eaf7ff 50%, #fff9fb 100%);
+    overflow: hidden;
+}
+
+.wishes-card {
+    width: min(1250px, 92vw);
+    margin: 20px auto;
+    padding: 45px 55px 40px;
+    box-sizing: border-box;
+
+    background: #f7efd9;
+    border: 3px solid #e5d7b8;
+    border-radius: 5px;
+
+    box-shadow:
+        10px 12px 0 rgba(91, 143, 185, 0.18),
+        0 20px 40px rgba(49, 90, 120, 0.20);
+
+    position: relative;
+    max-height: 90vh;
+        overflow-y: auto;
+    transform: rotate(-0.4deg);
+}
+
+.wishes-tape {
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%) rotate(3deg);
+
+    width: 110px;
+    height: 28px;
+
+    background: rgba(244, 185, 205, 0.85);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 16px;
+}
+
+.wishes-small {
+    margin: 5px 0 15px;
+    text-align: center;
+
+    color: #8fc7e8;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+
+.wishes-card h2 {
+    margin: 0 0 30px;
+
+    text-align: center;
+
+    color: #315a78;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 28px;
+    line-height: 1.6;
+
+    text-shadow: 3px 3px 0 #9ed4ef;
+}
+
+.wishes-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 18px;
+}
+
+.wish {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    min-height: 55px;
+    padding: 10px 14px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.65);
+
+    border-left: 5px solid #8fc7e8;
+
+    box-shadow: 3px 4px 0 rgba(91, 143, 185, 0.12);
+}
+
+.wish span {
+    min-width: 35px;
+
+    color: #f1a9c1;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10px;
+}
+
+.wish p {
+    margin: 0;
+
+    color: #596773;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+.wishes-ending {
+    margin: 30px 0 0;
+
+    text-align: center;
+
+    color: #315a78;
+
+    font-family: 'Press Start 2P', cursive;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+
+/* Smaller screens */
+
+@media (max-width: 700px) {
+
+    .wishes-page {
+        padding: 40px 12px;
+    }
+
+    .wishes-card {
+        padding: 45px 25px 35px;
+    }
+
+    .wishes-list {
+        grid-template-columns: 1fr;
+    }
+
+    .wishes-card h2 {
+        font-size: 22px;
+    }
+
+}
+
+    /* Smaller screens */
+
+    @media (max-width: 700px) {
+    
+    }
+
+    /* PASTE FINAL PAGE CSS HERE */
+
+    /* =========================
+   FINAL BIRTHDAY PAGE
+   ========================= */
+
+.final-page {
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    box-sizing: border-box;
+
+    background-image: url("Images/Last Pic.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+}
+
+.final-overlay {
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.28);
+}
+
+.final-message {
+    position: relative;
+    z-index: 2;
+
+    text-align: center;
+
+    padding: 30px 45px;
+
+    color: white;
+
+    text-shadow:
+        3px 3px 0 #315d7a,
+        0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.final-message h1 {
+    margin: 0;
+
+    font-family: "Press Start 2P", monospace;
+
+    font-size: clamp(24px, 4vw, 52px);
+
+    line-height: 1.5;
+}
+
+.final-message p {
+    margin-top: 28px;
+
+    font-family: "Press Start 2P", monospace;
+
+    font-size: clamp(14px, 2vw, 24px);
+
+    line-height: 1.6;
+}
+
+</style>
+
+<script>
+
+function openBirthday() {
+    document.getElementById("opening").style.display = "none";
+    document.getElementById("calendar").style.display = "flex";
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function openLetter() {
+    document.getElementById("letter").style.display = "flex";
+
+    document.getElementById("letter").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function backToMemories() {
+    document.getElementById("scrapbook").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+        function goBack() {
+
+            document.getElementById("birthday").style.display = "none";
+
+            document.getElementById("opening").style.display = "flex";
+
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+
+        }
+let currentPage = 0;
+
+const pages = [
+    "calendar",
+    "birthday",
+    "scrapbook",
+    "letter",
+    "photo-page",
+    "wishes",
+     "reasons",
+     "final-page"
+];
+
+function showPage(index) {
+    if (index < 0 || index >= pages.length) return;
+
+    currentPage = index;
+
+    pages.forEach(function(id) {
+        const page = document.getElementById(id);
+
+        if (page) {
+            page.style.display = "none";
+        }
+    });
+
+    const current = document.getElementById(pages[currentPage]);
+
+    if (current) {
+    if (pages[currentPage] === "wishes") {
+        current.style.display = "block";
+    } else {
+        current.style.display = "flex";
+    }
+}
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+}
+
+function previousPage() {
+    showPage(currentPage - 1);
+}
+
+function nextPage() {
+    showPage(currentPage + 1);
+}
+
+document.addEventListener("click", function(event) {
+
+    if (event.target.closest("button, a, .envelope")) {
+        return;
+    }
+
+    if (event.clientX < window.innerWidth / 2) {
+        previousPage();
+    } else {
+        nextPage();
+    }
+
+});
+function makeWish() {
+
+    for (let i = 0; i < 80; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.className = "confetti";
+
+        confetti.style.left = Math.random() * 100 + "vw";
+        confetti.style.backgroundColor =
+            ["#8fc7e8", "#f1a9c1", "#ffffff", "#315a78"][Math.floor(Math.random() * 4)];
+
+        confetti.style.animationDelay = Math.random() * 0.5 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(function() {
+            confetti.remove();
+        }, 3000);
+    }
+}
+    </script>
+
+</body>
+
+</html>
